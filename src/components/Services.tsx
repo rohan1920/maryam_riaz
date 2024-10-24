@@ -49,7 +49,7 @@ export default function Services() {
   return (
     <div className="bg-[#121212] pt-[4rem] md:pb-[5rem]">
       <p className="text-center text-white text-[28px] sm:text-[33px] md:text-[45px] font-bold uppercase">
-        My <span className="text-rose-900">Services</span>
+        My <span className="text-rose-900">Skills</span>
       </p>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
         {skills.map((skill, index) => (
