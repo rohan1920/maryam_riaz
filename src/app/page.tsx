@@ -6,6 +6,8 @@ import React, { useState } from "react";
 import About from "@/components/about";
 import Services from "@/components/Services";
 
+import BlogCard2 from "@/components/projects";
+
 const Homepage = () => {
   const [nav, setNav] = useState(false);
 
@@ -21,7 +23,8 @@ const Homepage = () => {
         <Hero />
         <About />
         <Services />
-        npm install framer-motion
+
+        <BlogCard2 />
       </div>
     </div>
   );

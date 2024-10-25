@@ -47,30 +47,51 @@ export default function Services() {
   }, []);
 
   return (
-    <div className="bg-[#121212] pt-[4rem] md:pb-[5rem]">
+    <div className="bg-[#121212] pt-[4rem] md:pb-[5rem] overflow-hidden">
       <p className="text-center text-white text-[28px] sm:text-[33px] md:text-[45px] font-bold uppercase">
         My <span className="text-rose-900">Skills</span>
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
-        {skills.map((skill, index) => (
-          <motion.div
-            key={index}
-            className="flex flex-col items-center skill"
-            initial={{ opacity: 0, scale: 0.8 }} // Initial state
-            animate={
-              visibleSkills.includes(index) ? { opacity: 1, scale: 1 } : {}
-            } // Animation when visible
-            transition={{ duration: 0.5 }} // Transition properties
-            onClick={() => console.log(`Clicked on ${skill.name}`)} // Handle click event
-            whileTap={{ scale: 0.9 }} // Scale down on click
-            whileHover={{ scale: 1.1 }} // Scale up on hover
-          >
-            <Image src={skill.imgSrc} alt={skill.name} width={80} height={80} />
-            <p className="mt-4 text-lg font-semibold text-gray-700">
-              {skill.name}
-            </p>
-          </motion.div>
-        ))}
+      <div className="flex overflow-hidden relative">
+        <motion.div
+          className="flex gap-8 animate-marquee"
+          initial={{ x: "100%" }} // Start from the right
+          animate={{ x: "-100%" }} // Move to the left
+          transition={{
+            duration: 10, // Adjust speed here
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        >
+          {skills.map((skill, index) => (
+            <motion.div
+              key={index}
+              className="flex flex-col items-center skill"
+              initial={{ opacity: 0, scale: 0.8 }} // Initial state with scale
+              animate={
+                visibleSkills.includes(index)
+                  ? {
+                      opacity: 1,
+                      scale: 1,
+                      transition: { duration: 0.5 }, // Transition for the entrance
+                    }
+                  : {}
+              }
+              onClick={() => console.log(`Clicked on ${skill.name}`)} // Handle click event
+              whileTap={{ scale: 0.9 }} // Scale down on click
+              whileHover={{ scale: 1.1 }} // Scale up on hover
+            >
+              <Image
+                src={skill.imgSrc}
+                alt={skill.name}
+                width={80}
+                height={80}
+              />
+              <p className="mt-4 text-lg font-semibold text-white">
+                {skill.name}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </div>
   );
