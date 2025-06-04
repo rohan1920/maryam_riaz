@@ -70,13 +70,13 @@ const Particle = () => {
                 default: "bounce",
               },
               random: false,
-              speed: 2, // Reduced speed for slower particles
+              speed: 1, // Reduced speed for slower particles
               straight: false,
             },
             number: {
               density: {
                 enable: true,
-                area: 800,
+                area: 1000, // Increased area for a wider nest
               },
               value: 60,
             },

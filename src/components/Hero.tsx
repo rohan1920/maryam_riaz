@@ -13,11 +13,12 @@ const Hero = () => {
       <div className="w-[90%] lg:w-[80%] mx-auto h-full flex flex-col lg:flex-row items-center justify-center gap-6 md:gap-8 lg:gap-[3rem]">
         {/* Text Section */}
         <div className="text-center lg:text-left lg:max-w-[50%]">
-          <h1 className="text-[30px] sm:text-[35px] md:text-[45px] lg:text-[50px] text-white font-bold">
+          <h1 className="text-[35px] md:text-[45px] lg:text-[50px] text-white font-bold">
             HI, I am <span className="text-pink-900">Maryam Riaz</span>
           </h1>
 
           <TextEffect />
+
           <p className="mt-4 text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] text-teal-100 max-w-[600px] mx-auto lg:mx-0">
             Welcome to the digital world of Maryam Riaz – where a passion for
             web development meets a journey of continuous learning. As an

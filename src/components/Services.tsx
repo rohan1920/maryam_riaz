@@ -17,7 +17,7 @@ const skills: Skill[] = [
   { name: "Redux", imgSrc: "/images/redux.png" },
   { name: "Tailwind CSS", imgSrc: "/images/tailwind.png" },
   { name: "Docker", imgSrc: "/images/docker.webp" },
-  { name: "FastAPI", imgSrc: "/images/i.png" },
+  { name: "FastAPI", imgSrc: "/images/fastapi.png" },
   { name: "Figma", imgSrc: "/images/figma.png" },
   { name: "Git", imgSrc: "/images/git.png" },
   { name: "Bootstrap", imgSrc: "/images/bootstrap.png" },

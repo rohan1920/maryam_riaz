@@ -20,7 +20,9 @@ const Homepage = () => {
         <MobileNav nav={nav} closeNav={closeNav} />
         <Nav openNav={openNav} />
         {/*Hero section  */}
+
         <Hero />
+
         <About />
         <Services />
 
